@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Oral Times - Preserving Voices, Connecting Communities</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .hero-pattern {
+            background-color: #2C3E50;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%233498db' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        .audio-wave {
+            position: relative;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 100px;
+            margin: 0 auto;
+        }
+        .audio-wave span {
+            width: 6px;
+            height: 30px;
+            background-color: #E67E22;
+            border-radius: 3px;
+            animation: audio-wave 1.2s infinite ease-in-out;
+        }
+        .audio-wave span:nth-child(2) {
+            animation-delay: 0.2s;
+            height: 40px;
+        }
+        .audio-wave span:nth-child(3) {
+            animation-delay: 0.4s;
+            height: 55px;
+        }
+        .audio-wave span:nth-child(4) {
+            animation-delay: 0.6s;
+            height: 35px;
+        }
+        .audio-wave span:nth-child(5) {
+            animation-delay: 0.8s;
+            height: 25px;
+        }
+
+        @keyframes audio-wave {
+            0%, 100% {
+                transform: scaleY(0.5);
+            }
+            50% {
+                transform: scaleY(1);
+            }
+        }
+        
+        .story-card {
+            transition: all 0.3s ease;
+        }
+        
+        .story-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .topic-badge {
+            transition: all 0.2s ease;
+        }
+        
+        .topic-badge:hover {
+            background-color: #E67E22;
+            color: white;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Header Navigation -->
+    <header class="bg-gray-800 text-white shadow-md">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="#" class="text-2xl font-bold">
+                        The <span class="text-yellow-500">Oral</span> Times
+                    </a>
+                </div>
+                
+                <nav class="hidden md:flex space-x-6">
+                    <a href="#" class="hover:text-yellow-500 transition duration-300">Home</a>
+                    <a href="#" class="hover:text-yellow-500 transition duration-300">Browse</a>
+                    <a href="#" class="hover:text-yellow-500 transition duration-300">About</a>
+                    <a href="#" class="hover:text-yellow-500 transition duration-300">For Researchers</a>
+                    <a href="#" class="hover:text-yellow-500 transition duration-300">For Journalists</a>
+                </nav>
+                
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="hover:text-yellow-500 transition duration-300">
+                        <i class="fas fa-user"></i> Login
+                    </a>
+                    <a href="#" class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md font-medium transition duration-300">
+                        Sign Up
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-pattern text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Preserving Voices, Connecting Communities</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                A platform dedicated to collecting, preserving, and sharing first-person narratives from diverse communities around the world.
+            </p>
+            
+            <!-- Search Bar -->
+            <div class="max-w-3xl mx-auto relative">
+                <input 
+                    type="text" 
+                    placeholder="Search oral histories by keyword, location, or topic..." 
+                    class="w-full px-6 py-4 rounded-full text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-500 shadow-lg"
+                >
+                <button class="absolute right-2 top-2 bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-2 rounded-full transition duration-300">
+                    <i class="fas fa-search mr-2"></i> Search
+                </button>
+            </div>
+            
+            <div class="mt-4">
+                <a href="#" class="text-yellow-300 hover:text-yellow-500 transition duration-300">
+                    Advanced Search Options
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topics Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-2">Explore by Topic</h2>
+            <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+                Discover oral histories across a variety of topics, from civil rights to cultural traditions
+            </p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Topic Card 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <div class="h-32 bg-yellow-500 flex items-center justify-center text-white text-xl font-semibold">
+                        Civil Rights Movement
+                    </div>
+                    <div class="p-4">
+                        <p class="text-gray-600 mb-4">First-person accounts of the struggle for equality and justice in America.</p>
+                        <div class="flex justify-between text-sm text-gray-500">
+                            <span>235 Stories</span>
+                            <span>15 Communities</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Topic Card 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <div class="h-32 bg-blue-500 flex items-center justify-center text-white text-xl font-semibold">
+                        Immigration Stories
+                    </div>
+                    <div class="p-4">
+                        <p class="text-gray-600 mb-4">Personal journeys of immigrants and their experiences adapting to new cultures.</p>
+                        <div class="flex justify-between text-sm text-gray-500">
+                            <span>312 Stories</span>
+                            <span>28 Communities</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Topic Card 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <div class="h-32 bg-purple-500 flex items-center justify-center text-white text-xl font-semibold">
+                        Indigenous Voices
+                    </div>
+                    <div class="p-4">
+                        <p class="text-gray-600 mb-4">Preserving traditional knowledge and cultural practices of indigenous communities.</p>
+                        <div class="flex justify-between text-sm text-gray-500">
+                            <span>187 Stories</span>
+                            <span>12 Communities</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Topic Card 4 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <div class="h-32 bg-green-500 flex items-center justify-center text-white text-xl font-semibold">
+                        Rural Life
+                    </div>
+                    <div class="p-4">
+                        <p class="text-gray-600 mb-4">Documenting the changing landscape of rural communities and agricultural traditions.</p>
+                        <div class="flex justify-between text-sm text-gray-500">
+                            <span>274 Stories</span>
+                            <span>22 Communities</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Topic Card 5 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <div class="h-32 bg-red-500 flex items-center justify-center text-white text-xl font-semibold">
+                        Labor History
+                    </div>
+                    <div class="p-4">
+                        <p class="text-gray-600 mb-4">Workers' experiences across industries documenting labor movements and conditions.</p>
+                        <div class="flex justify-between text-sm text-gray-500">
+                            <span>198 Stories</span>
+                            <span>18 Communities</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Topic Card 6 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <div class="h-32 bg-teal-500 flex items-center justify-center text-white text-xl font-semibold">
+                        Veterans' Stories
+                    </div>
+                    <div class="p-4">
+                        <p class="text-gray-600 mb-4">Personal accounts of military service, combat experiences, and life after service.</p>
+                        <div class="flex justify-between text-sm text-gray-500">
+                            <span>253 Stories</span>
+                            <span>14 Communities</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Topic Card 7 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <div class="h-32 bg-yellow-400 flex items-center justify-center text-white text-xl font-semibold">
+                        Pandemic Experiences
+                    </div>
+                    <div class="p-4">
+                        <p class="text-gray-600 mb-4">First-hand accounts of living through the COVID-19 global pandemic.</p>
+                        <div class="flex justify-between text-sm text-gray-500">
+                            <span>342 Stories</span>
+                            <span>32 Communities</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Topic Card 8 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <div class="h-32 bg-gray-700 flex items-center justify-center text-white text-xl font-semibold">
+                        Community Traditions
+                    </div>
+                    <div class="p-4">
+                        <p class="text-gray-600 mb-4">Cultural practices, festivals, and traditions from diverse communities.</p>
+                        <div class="flex justify-between text-sm text-gray-500">
+                            <span>217 Stories</span>
+                            <span>24 Communities</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-10">
+                <a href="#" class="bg-gray-800 hover:bg-gray-900 text-white px-6 py-3 rounded-md font-medium transition duration-300">
+                    View All Topics
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Stories Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-2">Featured Oral Histories</h2>
+            <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+                Listen to powerful personal narratives from individuals across diverse communities
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Story Card 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md story-card">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <div class="flex space-x-2">
+                                <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm topic-badge">Civil Rights</span>
+                                <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm topic-badge">1960s</span>
+                            </div>
+                            <span class="text-gray-500 text-sm">Atlanta, GA</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">My Time with the Freedom Riders</h3>
+                        <p class="text-gray-600 mb-4">
+                            "We knew we could die that day. But we also knew that freedom was worth fighting for. I remember boarding that bus with my heart pounding, but my resolve was stronger than my fear..."
+                        </p>
+                        <div class="flex justify-between items-center mt-6">
+                            <span class="text-gray-500">Ruth Johnson, 86</span>
+                            <button class="flex items-center space-x-2 text-blue-600 hover:text-blue-800 transition duration-300">
+                                <i class="fas fa-headphones"></i>
+                                <span>Listen Now</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Story Card 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md story-card">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <div class="flex space-x-2">
+                                <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm topic-badge">Immigration</span>
+                                <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm topic-badge">1980s</span>
+                            </div>
+                            <span class="text-gray-500 text-sm">Tucson, AZ</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Crossing the Border with Nothing but Hope</h3>
+                        <p class="text-gray-600 mb-4">
+                            "I left my village with only the clothes on my back and a picture of my mother. The journey north was dangerous, but the future I imagined for my children made every step worth taking..."
+                        </p>
+                        <div class="flex justify-between items-center mt-6">
+                            <span class="text-gray-500">Miguel Sanchez, 68</span>
+                            <button class="flex items-center space-x-2 text-blue-600 hover:text-blue-800 transition duration-300">
+                                <i class="fas fa-headphones"></i>
+                                <span>Listen Now</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Story Card 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md story-card">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <div class="flex space-x-2">
+                                <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm topic-badge">Indigenous</span>
+                                <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm topic-badge">2010s</span>
+                            </div>
+                            <span class="text-gray-500 text-sm">Standing Rock, ND</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Water Protectors: Standing for Our Future</h3>
+                        <p class="text-gray-600 mb-4">
+                            "Our ancestors have lived on this land for generations. The water is sacred to us. When they came with their machines, we knew we had to stand together, not just for ourselves but for the generations to come..."
+                        </p>
+                        <div class="flex justify-between items-center mt-6">
+                            <span class="text-gray-500">Sarah Standing Bear, 42</span>
+                            <button class="flex items-center space-x-2 text-blue-600 hover:text-blue-800 transition duration-300">
+                                <i class="fas fa-headphones"></i>
+                                <span>Listen Now</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-10">
+                <a href="#" class="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3 rounded-md font-medium transition duration-300">
+                    Explore More Stories
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Audience Sections -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-2">Resources for Our Audiences</h2>
+            <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+                Specialized tools and resources for different user groups
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- For Journalists -->
+                <div class="bg-white rounded-lg shadow-md p-8 text-center hover:shadow-lg transition duration-300">
+                    <div class="text-5xl text-yellow-500 mb-6">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">For Journalists</h3>
+                    <p class="text-gray-600 mb-6">
+                        Access authentic voices and perspectives to enhance your reporting. Find unique first-person accounts that bring depth to your stories.
+                    </p>
+                    <a href="#" class="text-blue-600 hover:text-blue-800 transition duration-300 font-medium">
+                        Journalism Resources
+                    </a>
+                </div>
+                
+                <!-- For Researchers -->
+                <div class="bg-white rounded-lg shadow-md p-8 text-center hover:shadow-lg transition duration-300">
+                    <div class="text-5xl text-blue-500 mb-6">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">For Researchers</h3>
+                    <p class="text-gray-600 mb-6">
+                        Explore our database for academic research with comprehensive metadata, transcripts, and audio files available for analysis.
+                    </p>
+                    <a href="#" class="text-blue-600 hover:text-blue-800 transition duration-300 font-medium">
+                        Research Access
+                    </a>
+                </div>
+                
+                <!-- For AI Development -->
+                <div class="bg-white rounded-lg shadow-md p-8 text-center hover:shadow-lg transition duration-300">
+                    <div class="text-5xl text-purple-500 mb-6">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">For AI Development</h3>
+                    <p class="text-gray-600 mb-6">
+                        Ethically sourced language datasets representing diverse demographics, dialects, and speech patterns for inclusive AI.
+                    </p>
+                    <a href="#" class="text-blue-600 hover:text-blue-800 transition duration-300 font-medium">
+                        Data Licensing
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contribute Section -->
+    <section class="py-16 bg-gray-800 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Be Part of Preserving History</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">
+                The Oral Times relies on contributions from journalists, researchers, and community members. Help us preserve important voices and stories for future generations.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <a href="#" class="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-3 rounded-md font-medium transition duration-300">
+                    Submit an Oral History
+                </a>
+                <a href="#" class="bg-transparent hover:bg-white hover:text-gray-800 text-white border-2 border-white px-8 py-3 rounded-md font-medium transition duration-300">
+                    Support Our Mission
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Featured Audio Player Section -->
+    <section class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto rounded-lg bg-gray-800 p-6 shadow-xl">
+                <h3 class="text-xl font-semibold mb-2">Now Playing</h3>
+                <p class="text-yellow-500 font-medium mb-4">
+                    "The Day We Marched on Washington" by James Wilson
+                </p>
+                
+                <div class="mb-6">
+                    <div class="audio-wave mb-3">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm">1:24</span>
+                        <div class="flex space-x-6">
+                            <button class="text-xl hover:text-yellow-500 transition duration-300">
+                                <i class="fas fa-step-backward"></i>
+                            </button>
+                            <button class="text-3xl hover:text-yellow-500 transition duration-300">
+                                <i class="fas fa-play-circle"></i>
+                            </button>
+                            <button class="text-xl hover:text-yellow-500 transition duration-300">
+                                <i class="fas fa-step-forward"></i>
+                            </button>
+                        </div>
+                        <span class="text-sm">5:37</span>
+                    </div>
+                </div>
+                
+                <div class="flex justify-between items-center">
+                    <div>
+                        <span class="text-sm text-gray-400">From collection:</span>
+                        <span class="ml-2 text-sm">Civil Rights Movement</span>
+                    </div>
+                    <div class="flex space-x-4">
+                        <button class="hover:text-yellow-500 transition duration-300">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="hover:text-yellow-500 transition duration-300">
+                            <i class="fas fa-share-alt"></i>
+                        </button>
+                        <button class="hover:text-yellow-500 transition duration-300">
+                            <i class="fas fa-download"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="text-xl font-bold mb-4">The Oral Times</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Our Mission</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Team</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Partners</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">For Journalists</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">For Researchers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">For AI Development</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Educational Use</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">API Documentation</a></li>
+                    </ul>
+                </div>
